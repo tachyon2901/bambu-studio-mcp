@@ -1,0 +1,9 @@
+node_modules/
+output/
+templates/
+printer.local.json
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store

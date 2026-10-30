@@ -1,0 +1,6 @@
+{
+  "host": "PRINTER_LAN_IP",
+  "serial": "PRINTER_SERIAL",
+  "nozzle_diameter": "0.4",
+  "bed_type": "textured_plate"
+}
