@@ -8,8 +8,7 @@
   "private": true,
   "scripts": {
     "test": "node --test tests/*.test.mjs",
-    "start:studio": "node studio-server.mjs",
-    "smoke": "node smoke-test.mjs"
+    "start:studio": "node studio-server.mjs"
   },
   "name": "bambu-studio-mcp",
   "version": "0.1.0",

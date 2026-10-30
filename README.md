@@ -9,7 +9,7 @@ an autonomous print monitor, or a direct Bambu Handy integration.
 
 ## Install
 
-Requires Node.js 22 or newer. The printer launcher and slicer smoke check target
+Requires Node.js 22 or newer. The printer launcher targets
 macOS with Bambu Studio in `/Applications/BambuStudio.app`. The project editor
 and automated tests do not require Studio or a printer.
 
@@ -71,13 +71,8 @@ guarantee. Inspect the resulting slice before printing.
 Bambu Studio. Its 46 tools include slicing, profile inspection, AMS mapping,
 status and camera access; printer features depend on connectivity.
 
-```sh
-npm run smoke
-# Optional local slice: P2S 0.4 mm, PLA Basic, textured plate
-node smoke-test.mjs --slice /absolute/path/to/model.stl
-```
-
-Neither check sends printer commands. Outputs persist in ignored `output/`.
+Use the connected slicing tools to test a copy of your own model. Outputs
+persist in ignored `output/`.
 A restricted macOS sandbox can cause Studio to abort even when the same local
 slicing command works outside the sandbox.
 
@@ -94,7 +89,7 @@ been validated on the development printer; its Studio Device page was inspected.
 ## Verification and limits
 
 - Automated tests cover archive preservation, source immutability, types/ranges,
-  stale hashes, overwrite refusal, refusal of sliced projects and MCP startup.
+  stale hashes, overwrite refusal and refusal of sliced projects.
 - Tests generate a synthetic archive; it is a format test, not a printable model.
   GitHub Actions runs these tests on Node 22 without Studio.
 - Separate local validation used a real P2S project with 557 settings. Studio
